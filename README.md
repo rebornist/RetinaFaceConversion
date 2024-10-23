@@ -18,9 +18,9 @@ mv Pytorch_Retinaface core
 ```
 
 ##### Data Download
-1. Download the [WIDERFACE](http://shuoyang1213.me/WIDERFACE/WiderFace_Results.html) dataset.
+1. Download image files from [WIDERFACE](http://shuoyang1213.me/WIDERFACE/WiderFace_Results.html)
 
-2. Download annotations (face bounding boxes & five facial landmarks) from [baidu cloud](https://pan.baidu.com/s/1Laby0EctfuJGgGMgRRgykA) or [dropbox](https://www.dropbox.com/s/7j70r3eeepe4r2g/retinaface_gt_v1.1.zip?dl=0)
+2. Download annotation files from [google drive](https://drive.google.com/file/d/1tU_IjyOwGQfGNUvZGwWWM4SwxKp2PUQ8/view) or [dropbox](https://www.dropbox.com/s/7j70r3eeepe4r2g/retinaface_gt_v1.1.zip?dl=0)
 
 3. 디렉토리 구조
 ```Shell
@@ -30,14 +30,19 @@ mv Pytorch_Retinaface core
       label.txt
     val/
       images/
+      label.txt
       wider_val.txt
+    test/
+      images/
+      label.txt
 ```
 ps: wider_val.txt 에는 val/images/ 폴더 내 파일명만 입력해야합니다.
+
+4. 2024년 10월 기준 디렉토리 구조를 반영한 압축 파일 [google drive](https://drive.google.com/drive/folders/10CrJHjvQz1oPPL089PLFyCkE3_lt9VLi?usp=sharing)
 
 ## Training
 
 1. 학습 시작 전 ``core/data/config.py train.py``에서 network 옵션(예: batch_size, min_sizes, steps 등)을 확인해야 합니다.
-
 
 2. WIDER FACE 기반 모델 학습 커멘드:
   ```Shell
