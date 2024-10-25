@@ -20,7 +20,7 @@ parser.add_argument('--network', default='resnet50', help='Backbone network mobi
 parser.add_argument('--origin_size', default=True, type=str, help='Whether use origin image size to evaluate')
 parser.add_argument('--save_folder', default='./core/widerface_evaluate/widerface_txt/', type=str, help='Dir to save txt results')
 parser.add_argument('--cpu', action="store_true", default=False, help='Use cpu inference')
-parser.add_argument('--dataset_folder', default='./dataset/widerface/val/images/', type=str, help='dataset path')
+parser.add_argument('--dataset_folder', default='../datasets/widerface/val/images/', type=str, help='dataset path')
 parser.add_argument('--confidence_threshold', default=0.02, type=float, help='confidence_threshold')
 parser.add_argument('--top_k', default=5000, type=int, help='top_k')
 parser.add_argument('--nms_threshold', default=0.4, type=float, help='nms_threshold')

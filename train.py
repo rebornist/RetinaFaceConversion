@@ -15,7 +15,7 @@ from core.layers.functions.prior_box import PriorBox
 from core.models.retinaface import RetinaFace
 
 parser = argparse.ArgumentParser(description='Retinaface Training')
-parser.add_argument('--training_dataset', default='./dataset/widerface/train/label.txt', help='Training dataset directory')
+parser.add_argument('--training_dataset', default='../datasets/widerface/train/label.txt', help='Training dataset directory')
 parser.add_argument('--network', default='mobile0.25', help='Backbone network mobile0.25 or resnet50')
 parser.add_argument('--num_workers', default=4, type=int, help='Number of workers used in dataloading')
 parser.add_argument('--lr', '--learning-rate', default=1e-3, type=float, help='initial learning rate')

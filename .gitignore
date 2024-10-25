@@ -159,3 +159,7 @@ cython_debug/
 __pycache__/
 dataset/widerface/
 core/weights/
+weights/
+*.mp4
+*.avi
+*.log

@@ -1,7 +1,7 @@
 import cv2
 
 # 원본 이미지 경로와 라벨링 데이터
-image_path = "~/dev/RetinaFaceConversion/dataset/widerface/val/images/0--Parade/0_Parade_marchingband_1_379.jpg"  # 원본 이미지 파일 경로
+image_path = "~/dev/RetinaFaceExtension/dataset/widerface/val/images/0--Parade/0_Parade_marchingband_1_379.jpg"  # 원본 이미지 파일 경로
 labels = """
 956 314 13 16 0.87650275 
 900 313 13 17 0.85654414 

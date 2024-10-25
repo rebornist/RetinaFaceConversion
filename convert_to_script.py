@@ -8,7 +8,7 @@ parser.add_argument('-m', '--trained_model', default='./weights/mobilenet0.25_Fi
 parser.add_argument('--network', default='mobile0.25', help='Backbone network mobile0.25 or resnet50')
 parser.add_argument('--long_side', default=640, help='when origin_size is false, long_side is scaled size(320 or 640 for long side)')
 parser.add_argument('--cpu', action="store_true", default=True, help='Use cpu inference')
-parser.add_argument('--save_path', default=f'./weights/mobilenet0.25_scripted.pt', type=str, help='Export model to torchscript format')
+parser.add_argument('--save_path', default='./weights/mobilenet0.25_scripted.pt', type=str, help='Export model to torchscript format')
 
 args = parser.parse_args()
 
@@ -56,7 +56,7 @@ if __name__ == '__main__':
         cfg = cfg_re50
 
     # net and model
-    net = RetinaFace(cfg=cfg, phase = 'test')
+    net = RetinaFace(cfg=cfg, phase='test')
     net = load_model(net, args.trained_model, args.cpu)
     net.eval()
     print('Finished loading model!')
